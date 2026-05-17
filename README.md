@@ -1,40 +1,26 @@
 # spec-html-phased-planning
 
-Agent skill: maintain **phased long-range plans** as HTML in `.spec/`, static assets in `public/`, **linked CDN CSS** only (Tachyons default; Pico optional), **percent-based** progress, **no** Tailwind Play.
+Cursor / agent skill: phased specs as HTML in `.spec/`, assets in `public/`, **linked CDN CSS** (Tachyons or Pico), **percent** progress—**no** Tailwind Play.
 
-## Install (`skills` CLI)
-
-From the consumer project root (requires Node.js):
+## Install
 
 ```bash
-npx skills add <npm package or GitHub repo>
+npx skills add <package-or-github-repo>
+npx skills add .                    # from a clone of this repo
 ```
 
-Pre-publish / local path:
-
-```bash
-npx skills add .
-npx skills add /path/to/this/repo
-```
-
-The CLI installs into each agent’s skills directory (e.g. `.cursor/skills/`, per tool prompts).
+Needs Node.js. Installs into agent-specific skill dirs (e.g. `.cursor/skills/`).
 
 ## Cursor (manual)
 
 Copy `skills/spec-html-phased-planning/SKILL.md` to `.cursor/skills/spec-html-phased-planning/SKILL.md`.
 
-## Maintenance
+Edit only `skills/.../SKILL.md`; keep `.cursor/...` in sync if you use both.
 
-- **Source of truth:** `skills/spec-html-phased-planning/SKILL.md`.
-- Mirror `.cursor/skills/...` when changing content.
+## Publish
 
-## Publish (npm)
-
-1. Confirm `name` / `version` in `package.json`; add `repository` / `author` as needed.
-2. `npm login`
-3. Scoped public package: `npm publish --access public`
-4. Unscoped: `npm publish`
+`npm login` → `npm publish` (scoped packages: add `--access public`).
 
 ## License
 
-MIT. See [LICENSE](./LICENSE).
+[MIT](./LICENSE)
