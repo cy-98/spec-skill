@@ -1,7 +1,7 @@
 {
   "name": "spec-html-phased-planning",
   "version": "1.0.0",
-  "description": "Agent skill: HTML phased specs under .spec/, CDN-delivered CSS (e.g. Tachyons/Pico, no build), progress by phase. For long-term planning workflows (Cursor / skills ecosystem).",
+  "description": "Agent skill: phased HTML specs in .spec/, linked CDN CSS (Tachyons/Pico), percentage progress—long-range / multi-phase work (Cursor & skills ecosystem).",
   "license": "MIT",
   "keywords": [
     "agent-skill",
