@@ -45,10 +45,10 @@ From `.spec/*.html`, reference assets as `../public/...`.
 
 ## Styling (CDN CSS)
 
-**Default:** Tachyons `4.12.0` (atomic utilities, single file).
+**Default:** Bulma `1.x` (CSS-only component layout; no JS required for static specs).
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tachyons@4.12.0/css/tachyons.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1/css/bulma.min.css" />
 ```
 
 **Alternative:** Pico `2.x` (classless, semantic markup).
@@ -78,7 +78,7 @@ Optional project overrides: `public/spec.css` (still no JS).
 - Single `h1`; descending `h2`/`h3`; no skipped levels.
 - Descriptive link text; sufficient contrast (tweak via `public/spec.css` if required).
 
-## Starter template (Tachyons)
+## Starter template (Bulma)
 
 ```html
 <!DOCTYPE html>
@@ -87,29 +87,33 @@ Optional project overrides: `public/spec.css` (still no JS).
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Phase title — spec</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tachyons@4.12.0/css/tachyons.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1/css/bulma.min.css" />
   <link rel="stylesheet" href="../public/spec.css" />
 </head>
-<body class="bg-near-white sans-serif pa4 lh-copy">
-  <main class="center mw7">
-    <header class="mb4">
-      <p class="f6 gray">Phase progress: <strong>0%</strong> · Updated: YYYY-MM-DD</p>
-      <h1 class="f3 fw6 mt0">Phase title</h1>
-      <p class="mid-gray">One-line phase objective.</p>
-    </header>
-    <section>
-      <h2 class="f4 fw6">Work items</h2>
-      <ul class="pl3">
-        <li>Item A — <strong>0%</strong></li>
-        <li>Item B — <strong>0%</strong></li>
-      </ul>
-    </section>
-  </main>
+<body>
+  <section class="section">
+    <div class="container">
+      <div class="content">
+        <header>
+          <p class="is-size-7 has-text-grey">Phase progress: <strong>0%</strong> · Updated: YYYY-MM-DD</p>
+          <h1 class="title is-3">Phase title</h1>
+          <p class="subtitle is-6 has-text-grey">One-line phase objective.</p>
+        </header>
+        <section class="mt-5">
+          <h2 class="title is-4">Work items</h2>
+          <ul>
+            <li>Item A — <strong>0%</strong></li>
+            <li>Item B — <strong>0%</strong></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
 ```
 
-(Pico: drop utility classes; lean on semantic tags.)
+(Pico: drop Bulma classes; lean on semantic tags.)
 
 ## Checklist
 
